@@ -58,6 +58,11 @@ body {
 }
 
 .header__nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background: var(--white);
     margin-bottom: 54px;
 }
 
@@ -109,6 +114,10 @@ body {
 
 #header {
     margin-bottom: 145px;
+}
+
+.header__content {
+    margin-top: 140px;
 }
 
 .header__container {
