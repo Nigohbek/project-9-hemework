@@ -9,9 +9,12 @@
     --link: #1E6BDD;
     --blue: #1E6BDD;
     --nav-link: #0070C1;
+    --soft: #0070C1;
     --icon: #0070C1;
     --nav-item: #000;
     --black: #000;
+    --timetitle: #273747;
+    --background: #273747;
     --card-txt: rgba(0, 0, 0, 0.5);
 }
 
@@ -49,13 +52,24 @@ body {
     margin: 0 auto;
 }
 
-/* ==================== header nav start ===================== */
-
-.header__nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.btn {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--white);
+    padding: 10px 25px;
+    background: var(--btn);
+    border: 1px solid var(--btn);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 500ms;
 }
+
+.btn:hover {
+    background: var(--white);
+    color: var(--btn);
+}
+
+/* ==================== header nav start ===================== */
 
 .header__nav {
     position: fixed;
@@ -68,6 +82,9 @@ body {
 
 .nav__container {
     padding: 33px 0 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav__left {
@@ -101,6 +118,24 @@ body {
 
 .nav__links:hover {
     color: var(--nav-link);
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.nav__right-item {
+    display: flex;
+    column-gap: 5px;
+}
+
+.nav__right-item select {
+    outline: none;
+    color: var(--nav-link);
+    border-radius: 20px;
+    border: 1px solid var(--blue);
 }
 
 .nav__right-ru {
@@ -157,22 +192,6 @@ body {
     color: var(--text);
 }
 
-.btn {
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--white);
-    padding: 10px 15px;
-    background: var(--btn);
-    border: 1px solid var(--btn);
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 500ms;
-}
-
-.btn:hover {
-    background: var(--white);
-    color: var(--btn);
-}
 
 /* -------------------- section info start -------------------- */
 
@@ -328,6 +347,10 @@ body {
     margin-bottom: 30px;
 }
 
+.marketing__content-subtitle {
+    margin-left: 10px;
+}
+
 .top {
     position: relative;
 }
@@ -348,7 +371,6 @@ body {
     font-size: 31px;
     color: var(--black);
     letter-spacing: 0.05em;
-    margin-left: 10px;
 }
 
 /* ==================== section marketing bottom start ==================== */
@@ -378,7 +400,7 @@ body {
     left: 25px;
 }
 
-.marketing__bottom-subtitle {
+.marketing__subtitle {
     font-weight: 600;
     font-size: 25px;
     color: var(--black);
@@ -447,6 +469,7 @@ body {
     display: flex;
     align-items: center;
     column-gap: 25px;
+    overflow-y: scroll;
 }
 
 .umd__content-card {
@@ -467,7 +490,7 @@ body {
 }
 
 .umd__content-subtitle {
-    margin-bottom: 36px;
+    margin:0 0 36px 10px;
 }
 
 .cmt {
@@ -551,4 +574,561 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+/* ---------==+++++++++ html about nav start ---------==+++++++++ */
+
+.about__nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background: var(--white);
+    margin-bottom: 25px;
+}
+
+/* ---------==+++++++++ html about content start ---------==+++++++++ */
+
+.content {
+    margin: 160px 0 50px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 25px;
+}
+
+.abut__content-link {
+    margin-right: 0;
+    color: #414141;
+}
+
+.about__left-txt {
+    max-width: 713px;
+    margin-bottom: 10px;
+}
+
+.about__left-text {
+    max-width: 690px;
+    margin-bottom: 26px;
+}
+
+.about__left-learn {
+    margin-bottom: 25px;
+}
+
+.about__left-title {
+    margin-bottom: 10px;
+}
+
+.about__left-card {
+    margin-bottom: 16px;
+}
+
+.about__icon  {
+    color: var(--icon);
+    border-radius: 50%;
+    border: 2px solid var(--icon);
+    padding: 6px;
+    margin-right: 15px;
+}
+
+.about__left-time {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.about__left-subtitle {
+    margin-bottom: 5px;
+}
+
+.time__title {
+    font-weight: 400;
+    font-size: 31px;
+    color: var(--timetitle);
+}
+
+.time__links {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--link);
+}
+
+/* ---------==+++++++++ html about content start ---------==+++++++++ */
+
+.abut__content-right {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #1E6BDD;
+    box-shadow: 0px 4px 8px rgba(0, 126, 111, 0.04);
+    border-radius: 20px;
+    padding: 54px 48px 66px;
+}
+
+.about__top {
+    margin-bottom: 10px;
+}
+
+.trening {
+    width: 225px;
+}
+
+.about__top-subtitle {
+    margin: 0 0 5px 0;
+}
+
+.about__top-links {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* ---------==+++++++++ html about bottom content start ---------==+++++++++ */
+
+.about__container {
+    display: flex;
+    column-gap: 67px;
+}
+
+.abut__content-right {
+    width: 462px;
+    height: 482px;
+    margin-top: 82px;
+}
+
+.about__bottom-link {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--link);
+    margin-bottom: 5px;
+}
+
+.about__bottom-inp {
+    border: none;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #1E6BDD;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.02);
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 365px;
+    color: #5c9eff;
+    padding: 13px 0 13px 20px;
+    margin-bottom: 20px;
+}
+
+.about__bottom-btn {
+    max-width: 365px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/* -------------------- section algoritm start ==================== */
+
+#algoritm {
+    margin-bottom: 80px;
+}
+
+.algoritm__content {
+    margin-bottom: 50px;
+}
+
+.algoritm__subtitle {
+    margin-bottom: 30px;
+}
+
+.algoritm__comments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px;
+}
+
+.algoritm__comments .algoritm__comment:nth-of-type(2) img {
+    width: 144px;
+    height: 91px;
+}
+
+.algoritm__comments .algoritm__comment:nth-of-type(3) img {
+    width: 144px;
+    height: 101px;
+}
+
+.algoritm__comment {
+    display: flex;
+    column-gap: 26px;
+}
+
+.algoritm__comment-subtitle {
+    margin-bottom: 5px;
+}
+
+.algoritm__comment-text {
+    width: 412px;
+}
+
+/* -------------------- section this start -------------------- */
+
+.this__cards {
+    display: flex;
+    column-gap: 25px;
+    margin-bottom: 50px;
+}
+
+.this__card {
+    padding: 15px 20px 17px;
+    background: #E5F2F1;
+    box-shadow: 0px 2px 8px rgba(0, 126, 111, 0.08);
+    border-radius: 20px;
+}
+
+.this__subtitle {
+    margin-bottom: 30px;
+}
+
+.this__card-title {
+    max-width: 357px;
+    margin-bottom: 12px;
+}
+
+.this__card-text {
+    max-width: 340px;
+}
+
+.this__title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 31px;
+    color: var(--timetitle);
+}
+
+.this__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--blue);
+}
+
+/* ==================== section result start ==================== */
+
+.result {
+    display: flex;
+    align-items: center;
+    column-gap: 93px;
+}
+
+.result__subtitle {
+    margin-bottom: 67px;
+}
+
+.result__left-txt {
+    max-width: 657px;
+    margin-bottom: 20px;
+}
+
+.result__left-text {
+    max-width: 494px;
+    margin-bottom: 30px;
+}
+
+.result__left-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.result__left-btn i {
+    width: 11px;
+    height: 15px;
+    margin: 0 14px 0 15px;
+}
+
+.result__left-comments {
+    display: flex;
+    column-gap: 80px;
+}
+
+.result__left-cmt {
+    font-weight: 600;
+    font-size: 51px;
+    letter-spacing: 0.05em;
+    color: var(--timetitle);
+    margin-bottom: 5px;
+}
+
+/* -------------------- section itpark start ==================== */
+
+.itpark__content {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    margin-bottom: 58px;
+}
+
+.itpark__left {
+    width: 607px;
+    height: 391px;
+    flex-shrink: 1;
+}
+ 
+.itpark__left img {
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------- section right start -------------------- */
+
+.itpark__right-soft {
+    width: 607px;
+    margin-bottom: 20px;
+}
+
+.umdsoft {
+    color: var(--soft);
+}
+
+.IT__Park {
+    color: #84C905;
+}
+
+.soft {
+    font-weight: 600;
+    font-size: 51px;
+    line-height: 57px;
+    letter-spacing: 0.03em;
+    color: var(--black);
+}
+
+.itpark__right-text {
+    width: 605px;
+    font-size: 18px;
+}
+
+/* -------------------- section students content top start ==================== */
+
+#studets {
+    margin-bottom: 50px;
+}
+
+.students__content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* -------------------- section students content bottom start ==================== */
+
+.students__content-cards {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.students__content-card {
+    padding: 30px;
+    background: #E8F1FF;
+    border-radius: 20px;
+}
+
+.students__content-comments {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.students__comment-text {
+    font-size: 16px;
+    margin-top: 5px;
+    color: rgba(39, 55, 71, 0.6);
+}
+
+.students__content-text {
+    width: 337px;
+}
+
+/* ==================== section future top start ==================== */
+
+.future__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.future__content-footer {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    margin-bottom: 81px;
+}
+
+.future__footer-comment {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 10px;
+}
+
+.future__footer-cmt {
+    color: var(--timetitle);
+}
+
+.future__footer-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--timetitle);
+}
+
+.future__footer-text {
+    color: rgba(39, 55, 71, 0.7);
+    max-width: 291px;
+}
+
+/* -------------------- section future video start ==================== */
+
+.future__content-center {
+    display: flex;
+    align-items: center;
+    column-gap: 136px;
+    margin-bottom: 69px;
+}
+
+.future__video-title {
+    max-width: 490px;
+    margin-bottom: 10px;
+}
+
+.video__title {
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--timetitle);
+}
+
+.future__video-text {
+    max-width: 490px;
+    margin-bottom: 40px;
+}
+
+.future__video-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.future__content-youtube {
+    width: 607px;
+    height: 332px;
+}
+
+.future__content-youtube img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------------- section visa content start ==================== */
+
+.visa {
+    background: var(--background);
+    height: 317px;
+}
+
+.visa__content-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.visa__left-cards {
+    padding: 73px 0;
+    background: var(--blue);
+}
+
+.visa__left-card {
+    display: flex;
+    align-items: center;
+    padding: 12px 23px 14px 15px;
+    background: var(--blue);
+}
+
+.visa__left-card:first-of-type {
+    background: #105DCF;
+}
+
+.visa__left-title {
+    max-width: 191px;
+}
+
+.visa__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
+}
+
+.visa__card-icon {
+    color: var(--white);
+}
+
+/* -------------------- section visa cash start ==================== */
+
+.visa__cash-subtitle {
+    color: var(--white);
+}
+
+.visa__subtitle {
+    margin: 20px 0 24px;
+}
+
+.cash__subtitle {
+    margin-bottom: 30px; 
+}
+
+.visa__cash-footer {
+    margin-bottom: 5px;
+}
+
+.visa__cash .visa__cash-subtitle:nth-of-type(2) {
+    font-size: 36px;
+}
+
+.visa__cash-footer {
+    display: flex;
+    align-items: center;
+    column-gap: 55px;
+    position: relative;
+}
+/* background: #60A4E8; */
+
+.visa__cash-footer .visa__cash-subtitle:nth-of-type(2) {
+    color: #BCDEFF;
+    text-decoration: line-through #60A4E8 4px;
+    font-size: 31px;
+}
+
+.oyiga {
+    font-size: 25px;
+}
+
+/* -------------------- section visa pay start ==================== */
+
+.visa__pay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 21px;
+}
+
+.visa__pay-subtitle {
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+}
+
+/* -------------------------- footer start ============================== */
+
+.about__footer-content {
+    display: flex;
+    padding: 80px 0 43px;
 }
